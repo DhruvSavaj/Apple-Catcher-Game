@@ -43,6 +43,3 @@ We welcome contributions! Follow these steps to contribute:
 - **JavaScript** (Vanilla JS)
 - **Phaser.js** (Game framework)
 - **HTML & CSS** (For structure and styling)
-
-## License
-This project is licensed under the **MIT License**.
