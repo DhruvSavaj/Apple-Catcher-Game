@@ -1,0 +1,116 @@
+:root {
+  font-family: "Inter", sans-serif;
+  --background: #121212;
+  --foreground: #f5f5f5;
+  --accent: #1e1e5e;
+  --highlight: #ff4757;
+  --shadow: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--background);
+  color: var(--foreground);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+#gameCanvas {
+  border: 2px solid var(--highlight);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px var(--shadow);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.gameUI {
+  width: 100%;
+  max-width: 400px; /* Increased size */
+  height: 300px; /* Increased size */
+  padding: 30px;
+  background-color: var(--accent);
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gameUI h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.gameUI p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+#gameStartDiv {
+  display: flex;
+}
+
+#gameEndDiv {
+  display: none;
+}
+
+#btnGameStart,
+#btnReGameStart {
+  display: inline-block;
+  width: 140px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: var(--highlight);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px var(--shadow);
+}
+
+#btnGameStart:hover,
+#btnReGameStart:hover {
+  background: white;
+  color: var(--highlight);
+  border: 1px solid var(--highlight);
+  cursor: pointer;
+  transform: scale(1.05);
+}
